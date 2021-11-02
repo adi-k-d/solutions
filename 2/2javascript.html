@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+Sentence: <input type="text" id="sentence" value="Mickey">
+Letter: <input type="text" id="letter" value="Mickey">
+
+<p id="result"></p>
+
+
+
+<button onclick="myFunction()">Try it</button>
+
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("sentence").value;
+  var y = document.getElementById("letter").value;
+
+ 
+
+  
+  
+  
+  if (x.indexOf(y)<0) {
+    document.getElementById("result").innerHTML ="The letter does not exist in the sentence";
+      
+  } else {
+     
+    var a=x.indexOf(y);
+    var w=x.length-a-1
+    var b=x.substr(-w);
+      document.getElementById("result").innerHTML =b;
+      console.log(x,y,x.indexOf(y),b)
+  
+  }
+  
+}
+</script>
+
+</body>
+</html>
